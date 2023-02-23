@@ -3,6 +3,7 @@ const secondVid = document.getElementById("second-video")
 const thirdVid = document.getElementById("third-video")
 const vidContainer = document.getElementById("video-holder")
 
+const btn = document.getElementById("btn");
 const videos = [firstVid, secondVid, thirdVid];
 
 console.log(videos)
@@ -25,9 +26,14 @@ function playVideo() {
 }
 
 
-if (!isWatched) {
-    playVideo();
-} else {
-    vidContainer.style.display = "none";
+function trigger(){
+    if (!isWatched) {
+        playVideo();
+        btn.style.display = "none"
+    } else {
+        vidContainer.style.display = "none";
+    }
 }
+
+
 
